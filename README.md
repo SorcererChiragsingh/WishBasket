@@ -9,7 +9,7 @@
 </h2>
 
 <p> 
-A full-stack, fully responsive e-commerce website using Next.js 14, Tailwind CSS, Firebase, Stripe, and Algolia.
+A full-stack, fully responsive e-commerce website using Next.js, Tailwind CSS, Firebase for(Firestore, Authentication), Stripe, and Algolia.
 </p>
 
 <a href="" target="_blank"><strong>➥ Live Demo</strong></a>
@@ -48,10 +48,11 @@ In this project, we will be building an in-depth full-stack
 
 ## Features
 
-- **Feature 1:** 
-- **Feature 2:** 
-- **Feature 3:** 
-- **Feature 4:** 
+- **Feature 1:** User authentication with Firebase
+- **Feature 2:** Product browsing and searching with Algolia
+- **Feature 3:** Shopping cart functionality
+- **Feature 4:** Secure payment processing with Stripe
+- **Feature 5:** Admin panel for managing products, orders, and users
 
 ## Screenshots
 
@@ -73,7 +74,9 @@ In this project, we will be building an in-depth full-stack
 
 - Frontend: Next.js, React.js, Tailwind Css, Algolia  
 - Backend: Next.Js
-- Database:Firebase Db
+- Database: Firebase Firestore
+- Payement: Stripe
+- Authentication: Firebase Authentication
 - Deployment: vercel
 
 
@@ -89,7 +92,6 @@ To get the project on your local system, use the following commands:
 
 ```bash
 git clone https://github.com/SorcererChiragsingh/WishBasket.git
-# cd WishBasket
 ```
 
 ## How to Run WishBasket on Your System 🛠🛠
@@ -99,28 +101,29 @@ git clone https://github.com/SorcererChiragsingh/WishBasket.git
 ```bash
 cd WishBasket
 npm install
-# cd ../frontend
-# npm install
 ```
 
 2️⃣ **Setup Environment Variables:**
 
-Create a `.env` file in the `WishBasket` directory and add the following:
+Create a `.env.local` file in the `WishBasket` directory and add the following:
 
 ```env
-FRONTEND_URL= ''
-# PORT=
-MONGODB_CONN=""
-JWT_SECRET="djfnsndlknjndferutiuerhtfvjndfvncvxbvhyfeyrwuhrqqasdllop" // random alphabet, that can nver be guessed.
-NODE_ENV="development" <!-- change it to "prodution" while deploying -->
+NEXT_PUBLIC_FIREBASE_API_KEY=""
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=""
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=""
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=""
+NEXT_PUBLIC_FIREBASE_APP_ID=""
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=""
+   
+NEXT_PUBLIC_DOMAIN=""
+   
+NEXT_PUBLIC_ALGOLIA_APP_ID=""
+NEXT_PUBLIC_ALGOLIA_APP_KEY=""
+   
+NEXT_PUBLIC_FIREBASE_SERVICE_ACCOUNT_KEYS='{}'
+``` 
 
-CLOUDINARY_APP_NAME=""
-CLOUDINARY_API_KEY=""
-CLOUDINARY_API_SECRET=""
-
-PayPal_Client_ID=""
-Paypal_Client_Secret=""
-```
 
 <!-- Create a `.env` file in the `client` directory and add the following:
 
@@ -130,10 +133,10 @@ VITE_API_BASE_URL=""
 VITE_FIREBASE_API=""
 ``` -->
 
-3️⃣ **Start the Server:**
+3️⃣ **Start the development Server:**
 
 ```bash
-cd Project_WishBasket/Ecom
+cd Project_WishBasket/ecomm
 npm run dev
 ```
 
@@ -146,9 +149,8 @@ npm run dev
 
 4️⃣ **Open the Application:**
 
-```bash
-Go to [http://localhost:3000](http://localhost:3000) in your browser 🚀
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. 🚀
+
 
  ## Report Issues
 - You can report issues on this project using Github issue.
