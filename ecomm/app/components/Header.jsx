@@ -4,6 +4,7 @@ import LogoutButton from "./LogoutButton";
 import AuthContextProvider from "@/contexts/AuthContext";
 import HeaderClientButtons from "./HeaderClientButtons";
 import AdminButton from "./AdminButton";
+import {Button} from '@heroui/react'
 
 export default function Header() {
     const menuList = [

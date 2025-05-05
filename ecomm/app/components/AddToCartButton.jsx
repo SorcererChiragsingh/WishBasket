@@ -3,7 +3,7 @@
 import { useAuth } from "@/contexts/AuthContext";
 import { useUser } from "@/lib/firestore/user/read";
 import { updateCarts } from "@/lib/firestore/user/write";
-import { Button } from "@nextui-org/react";
+import {Button} from '@heroui/react'
 import { useState } from "react";
 import toast from "react-hot-toast";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
