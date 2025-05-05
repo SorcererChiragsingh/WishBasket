@@ -2,7 +2,6 @@
 
 import { useAuth } from "@/contexts/AuthContext";
 import { useUser } from "@/lib/firestore/user/read";
-import { Badge } from "@nextui-org/react";
 import {Badge} from "@heroui/badge";
 import { Heart, ShoppingCart } from "lucide-react";
 import Link from "next/link";
