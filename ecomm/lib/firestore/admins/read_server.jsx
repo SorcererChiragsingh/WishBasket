@@ -1,6 +1,11 @@
-export default function page() {
-    return (<main>
-        <h1>FireStore Admins ReadServer Page</h1>
-    </main>
-    );
-}
+import { db } from "@/lib/firebase";
+import { doc, getDoc } from "firebase/firestore";
+
+export const getAdmin = async ({ id }) => {
+  const data = await getDoc(doc(db, `admins/${id}`));
+  if (data.exists()) {
+    return data.data();
+  } else {
+    return null;
+  }
+};

@@ -10,15 +10,15 @@ import {
 } from "firebase/firestore";
 import useSWR from "swr";
 
-export const getProductsCount = async () => {
-  const ref = collection(db, `products`);
+export const getUsersCount = async () => {
+  const ref = collection(db, `users`);
   const data = await getCountFromServer(ref);
   return data.data().count;
 };
 
-export function useProductCount() {
-  const { data, error, isLoading } = useSWR("products_count", (key) =>
-    getProductsCount()
+export function useUsersCount() {
+  const { data, error, isLoading } = useSWR("users_count", (key) =>
+    getUsersCount()
   );
   if (error) {
     console.log(error?.message);
