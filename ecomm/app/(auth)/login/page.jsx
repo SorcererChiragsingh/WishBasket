@@ -50,7 +50,7 @@ export default function page() {
     <main className="w-full flex justify-center items-center bg-gray-300 md:p-24 p-10 min-h-screen">
         <section className="flex flex-col gap-3">
         <div className="flex justify-center">
-          <img className="h-40" src="/WishBasket.svg" alt="Logo" />
+          <img className="h-20" src="/WishBasket.svg" alt="Logo" />
         </div>
         <div className="flex flex-col gap-3 bg-white md:p-10 p-5 rounded-xl md:min-w-[440px] w-full">
           <h1 className="font-bold text-xl">Login With Email</h1>
