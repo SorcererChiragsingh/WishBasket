@@ -42,3 +42,10 @@ function AdminChecking({ children }) {
 
   return <AdminLayout>{children}</AdminLayout>;
 }
+
+
+// "use client";
+
+// export default function Layout({ children }) {
+//   return <> {children}</>;
+// }
